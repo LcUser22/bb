@@ -1,11 +1,208 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Мой сайт</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Удаление аккаунта — Инструкция</title>
+  <meta name="description" content="Как удалить или заблокировать аккаунт: инструкция по обращению в службу поддержки." />
+  <style>
+    :root{
+      --bg: #0f172a;            /* slate-900 */
+      --card: #111827ee;        /* gray-900 with alpha */
+      --accent: #60a5fa;        /* blue-400 */
+      --accent-2:#93c5fd;       /* blue-300 */
+      --text: #e5e7eb;          /* gray-200 */
+      --muted:#94a3b8;          /* slate-400 */
+      --ok:#34d399;             /* emerald-400 */
+      --warn:#fbbf24;           /* amber-400 */
+      --shadow: 0 30px 60px rgba(0,0,0,.45), 0 12px 24px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 800px at 10% -20%, #1e293b 10%, transparent 60%),
+        radial-gradient(900px 700px at 110% 10%, #0b5cff33 10%, transparent 60%),
+        linear-gradient(180deg, #0b1220, #0a0f1d);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    .wrap{
+      max-width: 880px; margin: 40px auto; padding: 0 20px;
+    }
+
+    header{
+      display:flex; gap:16px; align-items:center; margin-bottom: 26px;
+    }
+
+    .logo{
+      width:52px; height:52px; border-radius:14px; display:grid; place-items:center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: var(--shadow);
+    }
+
+    .logo svg{ filter: drop-shadow(0 4px 10px rgba(0,0,0,.35)); }
+
+    h1{ font-size: clamp(24px, 3.2vw, 40px); margin:0; letter-spacing:.2px; }
+    .subtitle{ color: var(--muted); margin-top:4px }
+
+    .card{
+      background: linear-gradient(180deg, #0f172acc, #0b1220cc);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(148, 163, 184, .18);
+      border-radius: var(--radius);
+      padding: 22px 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .grid{ display:grid; gap:16px }
+    @media (min-width: 760px){ .grid{ grid-template-columns: 1.1fr 1fr } }
+
+    .badge{
+      display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:13px;
+      padding:6px 10px; border-radius:999px; background:#0b1220; border:1px solid rgba(148,163,184,.2);
+    }
+
+    ol.steps{ counter-reset: step; list-style:none; padding:0; margin:14px 0 0 }
+    ol.steps li{ position:relative; padding-left:44px; margin: 16px 0; }
+    ol.steps li::before{
+      counter-increment: step; content: counter(step);
+      position:absolute; left:0; top:2px; width:30px; height:30px; display:grid; place-items:center;
+      background: #0b1220; border:1px solid rgba(148,163,184,.25); color: var(--accent-2);
+      border-radius:12px; font-weight:700; box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+    }
+
+    .contact{
+      display:grid; gap:12px; align-content:start;
+    }
+
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+
+    .btn{
+      -webkit-tap-highlight-color: transparent;
+      appearance:none; border:none; cursor:pointer; text-decoration:none; color:#001018;
+      background: linear-gradient(135deg, var(--accent-2), var(--accent));
+      padding: 12px 16px; border-radius: 12px; font-weight:700; box-shadow: var(--shadow);
+    }
+
+    .btn.secondary{ background:#0b1220; color:var(--text); border:1px solid rgba(148,163,184,.25); }
+
+    .note{ font-size: 14px; color: var(--muted); }
+
+    .kicker{ display:flex; gap:10px; align-items:center; margin: 22px 0 6px; color: var(--muted) }
+    .kicker svg{ opacity:.8 }
+
+    .card.min{ padding:16px }
+
+    code.mail{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; padding:3px 8px; border-radius: 8px; background:#0b1220; border:1px solid rgba(148,163,184,.25) }
+
+    .tips{ display:grid; gap:12px }
+
+    footer{ margin:26px 0 44px; text-align:center; color:var(--muted); font-size:13px }
+  </style>
 </head>
 <body>
-    <h1>Привет, мир!</h1>
-    <p>Это мой первый сайт на GitHub Pages 🚀</p>
+  <div class="wrap">
+    <header>
+      <div class="logo" aria-hidden="true">
+        <!-- Mail icon -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+          <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" stroke="white" stroke-width="1.5"/>
+          <path d="m22 8-9.2 5.75a2 2 0 0 1-2.1 0L1.5 8" stroke="white" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Удаление аккаунта</h1>
+        <div class="subtitle">Инструкция для пользователей приложения Google&nbsp;Play Market</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Steps -->
+      <section class="card" aria-labelledby="steps-title">
+        <span class="badge" id="steps-title">Пошаговая инструкция</span>
+        <ol class="steps">
+          <li>
+            Напишите письмо в службу поддержки по адресу
+            <strong><a href="mailto:support@beriberu.ru">support@beriberu.ru</a></strong>.
+          </li>
+          <li>
+            Укажите в теме письма: <strong>«Удаление/Блокировка аккаунта»</strong>.
+          </li>
+          <li>
+            В тексте письма опишите дополнительную информацию, которая поможет идентифицировать вас и аккаунт (ID/логин, номер телефона, модель устройства, версия приложения и др.).
+          </li>
+          <li>
+            Отправьте письмо и следуйте дальнейшим указаниям оператора поддержки.
+          </li>
+        </ol>
+
+        <div class="kicker">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <span>Срок обработки запроса может занять некоторое время.</span>
+        </div>
+        <p class="note">Для безопасности аккаунта вы можете получить запрос на подтверждение личности.</p>
+      </section>
+
+      <!-- Contact & actions -->
+      <aside class="card contact" aria-labelledby="contact-title">
+        <span class="badge" id="contact-title">Контакты</span>
+        <div>
+          Почта поддержки: <code class="mail" id="mail">support@beriberu.ru</code>
+        </div>
+        <div class="cta">
+          <a class="btn" href="mailto:support@beriberu.ru?subject=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%2F%D0%91%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82%D0%B0">Написать в поддержку</a>
+          <button class="btn secondary" id="copyBtn" type="button" aria-label="Скопировать email">Скопировать email</button>
+        </div>
+
+        <div class="tips">
+          <div class="card min">
+            <strong>Совет:</strong> отправляйте письмо с адреса, привязанного к вашему аккаунту.
+          </div>
+          <div class="card min">
+            <strong>Важно:</strong> приложите скриншоты, если есть ошибки или квитанции об оплате.
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Служба поддержки • Эта страница создана для удобства пользователей
+    </footer>
+  </div>
+
+  <script>
+    // Текущий год в футере
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Копирование email в буфер обмена
+    const btn = document.getElementById('copyBtn');
+    btn?.addEventListener('click', async () => {
+      const email = 'support@beriberu.ru';
+      try {
+        await navigator.clipboard.writeText(email);
+        btn.textContent = 'Скопировано!';
+        btn.disabled = true;
+        setTimeout(()=>{ btn.textContent = 'Скопировать email'; btn.disabled = false; }, 1800);
+      } catch (e) {
+        // Фолбэк, если Clipboard API недоступен
+        const input = document.createElement('input');
+        input.value = email; document.body.appendChild(input); input.select();
+        document.execCommand('copy'); document.body.removeChild(input);
+        btn.textContent = 'Скопировано!';
+        setTimeout(()=>{ btn.textContent = 'Скопировать email'; }, 1800);
+      }
+    });
+  </script>
 </body>
 </html>
