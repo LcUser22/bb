@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Политика конфиденциальности — БериБеру</title>
+  <meta name="description" content="Политика конфиденциальности приложения БериБеру: какие данные собираем, как используем и как защищаем." />
+  <style>
+    :root{
+      --bg: #0f172a;
+      --card: #111827ee;
+      --accent: #60a5fa;
+      --accent-2:#93c5fd;
+      --text: #e5e7eb;
+      --muted:#94a3b8;
+      --shadow: 0 30px 60px rgba(0,0,0,.45), 0 12px 24px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 800px at 10% -20%, #1e293b 10%, transparent 60%),
+        radial-gradient(900px 700px at 110% 10%, #0b5cff33 10%, transparent 60%),
+        linear-gradient(180deg, #0b1220, #0a0f1d);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    .wrap{ max-width:880px; margin:40px auto; padding:0 20px }
+
+    header{ display:flex; gap:16px; align-items:center; margin-bottom:26px }
+    .logo{
+      width:52px; height:52px; border-radius:14px; display:grid; place-items:center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: var(--shadow);
+    }
+    .logo svg{ filter: drop-shadow(0 4px 10px rgba(0,0,0,.35)); }
+
+    h1{ font-size: clamp(24px,3.2vw,40px); margin:0 }
+    .subtitle{ color: var(--muted); margin-top:4px }
+
+    .card{
+      background: linear-gradient(180deg, #0f172acc, #0b1220cc);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(148,163,184,.18);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      margin-bottom:20px;
+    }
+
+    h2{ margin-top:28px; font-size:22px }
+    h3{ margin-top:20px; font-size:18px; color:var(--accent-2) }
+
+    ul{ padding-left:20px; }
+    ul li{ margin:6px 0 }
+
+    footer{ margin:30px 0 44px; text-align:center; color:var(--muted); font-size:13px }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo" aria-hidden="true">
+        <!-- Shield icon -->
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Политика конфиденциальности</h1>
+        <div class="subtitle">Приложение БериБеру</div>
+      </div>
+    </header>
+
+    <section class="card">
+      <p><strong>Последнее обновление:</strong> 13 сентября 2025 года</p>
+      <p>Мы уважаем вашу приватность. В этой политике описано, какие данные мы собираем, как их используем и как обеспечиваем их защиту.</p>
+    </section>
+
+    <section class="card">
+      <h2>Собираемые данные</h2>
+      <ul>
+        <li>Электронная почта и имя (если вы их указываете)</li>
+        <li>Номер телефона (при необходимости)</li>
+        <li>Диагностические данные и информация об устройстве</li>
+        <li>Данные об использовании приложения (например, действия внутри сервиса)</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Использование данных</h2>
+      <p>Мы используем ваши данные для:</p>
+      <ul>
+        <li>Обеспечения работы и улучшения приложения</li>
+        <li>Связи с вами при необходимости (поддержка, уведомления)</li>
+        <li>Анализа и улучшения качества сервиса</li>
+        <li>Обеспечения безопасности и предотвращения мошенничества</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Передача данных</h2>
+      <p>Мы не передаем персональные данные третьим лицам, кроме случаев, когда это требуется законом или необходимо для работы сервиса (например, поставщики облачных услуг).</p>
+    </section>
+
+    <section class="card">
+      <h2>Хранение данных</h2>
+      <p>Ваши данные хранятся только столько времени, сколько это необходимо для целей, описанных в политике. После этого они удаляются или анонимизируются.</p>
+    </section>
+
+    <section class="card">
+      <h2>Связь с нами</h2>
+      <p>Если у вас есть вопросы или вы хотите удалить данные, напишите нам:</p>
+      <p><a href="mailto:support@beriberu.ru">support@beriberu.ru</a></p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> БериБеру • Все права защищены
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
